@@ -7,7 +7,7 @@ export class LessonsService {
     lessons = [];
 
     constructor(private http:Http) {
-        // this.loadLessons();
+        this.loadLessons();
     }
 
     loadLessons() {
