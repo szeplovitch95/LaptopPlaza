@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Input } from "@angular/core";
 import { AppComponent } from "../app.component";
+import { CollapseOnClick } from "../directives/collapse-on-click.directive";
 
 @Component({
   selector: 'app-wrapper',
@@ -13,7 +14,12 @@ export class WrapperComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(this.lessons);
+  }
+
+  collapsed = false;
+
+  onToggle(collapsed) {
+    console.log(collapsed);
   }
 
 }

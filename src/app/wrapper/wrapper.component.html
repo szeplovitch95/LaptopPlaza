@@ -5,4 +5,11 @@
   <div *ngFor="let lesson of lessons">
     <div>{{lesson}}</div>
   </div>
+
+  <div collapse-on-click [collapsed]="collapsed" (collapsed)="onToggle($event)" class="card card-strong disable-text-selection collapsed">
+    <i class="md-icon collapsible-indicator"> arrow_drop_down </i>
+    <div class="collapsible-section">
+      This page section is collapsible, double click it and it will collapse or expand.
+    </div>
+  </div>
 </div>
