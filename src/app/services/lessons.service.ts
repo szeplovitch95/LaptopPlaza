@@ -11,7 +11,7 @@ export class LessonsService {
     }
 
     loadLessons() {
-        this.http.get('http://localhost:4200/items')
+        this.http.get('http://localhost:4005/items')
             .map(res => res.json())
             .subscribe(
                 users => this.lessons = users
