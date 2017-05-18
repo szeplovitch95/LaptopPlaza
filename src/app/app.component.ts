@@ -1,21 +1,19 @@
 import { Component } from '@angular/core';
-import { LessonsService } from "./services/lessons.service";
-import { WrapperComponent } from "./wrapper/wrapper.component";
-import { lessonsData } from './services/lessons';
+import { ItemsService } from "./services/items.service";
+import { ItemsListComponent } from "./items-list/items-list.component";
 import "rxjs/Rx";
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  providers: [LessonsService]
+  providers: [ItemsService]
 })
 export class AppComponent {
-  title = 'app works!';
-  lessons = lessonsData;
 
-  constructor(private lessonsService: LessonsService) {
+  constructor(private itemsService: ItemsService) {
+     
   }
-
+ 
 
 }
